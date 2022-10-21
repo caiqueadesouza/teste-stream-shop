@@ -1,0 +1,31 @@
+<app-header [btn_left]="false"></app-header>
+
+<div class="container-fluid">
+    <div class="input-group mb-3 input-group-lg my-2">
+        <input type="text" class="form-control input-buscar" placeholder="Pesquisar" name="buscar">
+    </div>
+</div>
+
+<div class="container-fluid" id="lista-filmes">
+
+    <div class="wrapper">
+        <div class="card mb-4" *ngFor="let item of filmes">
+            <img class="img-filme text-center" [src]="item.image">
+
+            <div class="card-body d-flex flex-column">
+                <p class="title">
+                    {{item.title}}
+                    <br>
+                    <span *ngFor="let gen of item.genres; let i = index" class="genero">
+                    {{i !== 0 ? ' - ' : ''}} {{gen}}
+                </span>
+                </p>
+            </div>
+
+            <div class="text-center">
+                <app-btn title="Comprar" (click)="goToDetalhesByService(item)"></app-btn>
+            </div>
+        </div>
+    </div>
+
+</div>

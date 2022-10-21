@@ -1,0 +1,45 @@
+$color-black: #00000099;
+#lista-filmes {
+    background: var(--color-cian) 0% 0% no-repeat padding-box;
+}
+
+.wrapper {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    justify-items: center;
+    .img-filme {
+        margin: 0 auto;
+        width: 8.75rem;
+        height: 9.375rem;
+        object-fit: fill;
+    }
+    .card {
+        top: 27px;
+        width: 11.25rem;
+        height: 298px;
+        background: var(--color-white) 0% 0% no-repeat padding-box;
+        box-shadow: 0px 2px 6px #00000029;
+        border-radius: 4px;
+        padding: 5px;
+        .card-body {
+            padding: 5px 0 0 0;
+            .title {
+                font: normal normal bold 14px/19px TT Norms Pro;
+                letter-spacing: 0px;
+                color: $color-black;
+                .genero {
+                    font: normal normal normal 12px/21px TT Norms Pro;
+                    letter-spacing: 0px;
+                    color: $color-black;
+                }
+            }
+        }
+    }
+}
+
+.form-control {
+    background: var(--color-cian) 0% 0% no-repeat padding-box;
+    border: 1px solid #00000035;
+    border-radius: 4px;
+}

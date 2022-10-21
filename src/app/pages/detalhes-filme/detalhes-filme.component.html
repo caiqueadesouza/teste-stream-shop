@@ -1,0 +1,39 @@
+<app-header [btn_left]="true"></app-header>
+
+<div class="container">
+
+    <div class="row">
+        <div class="d-flex justify-content-center my-3">
+            <img class="img-filme" [src]="filme.image" />
+        </div>
+
+        <div>
+            <h4 class="title">{{filme.title}}</h4>
+        </div>
+    </div>
+
+    <div class="card mb-4" *ngFor="let item of cinemas">
+        <div class="card-body">
+
+            <div class="mycontainer">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" class="icon-favorito">favorite</mat-icon>
+                <h5 class="card-title">
+                    <b>{{item.name}}</b>
+                </h5>
+            </div>
+
+            <p class="card-text">{{item.address}} {{item.addressComplement}}</p>
+
+            <hr />
+
+            <div *ngFor="let sala of item.rooms" class="mb-3">
+                <p class="card-text mb-0">
+                    <b>{{sala.name}} - <span class="tipo">{{sala.types}}</span></b>
+                </p>
+                <button type="button" class="btn btn-md btn-time" *ngFor="let sessao of sala.sessions">
+                  {{sessao.time}}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

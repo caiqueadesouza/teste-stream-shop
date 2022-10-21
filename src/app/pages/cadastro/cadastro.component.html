@@ -1,0 +1,30 @@
+<app-header [btn_left]="true"></app-header>
+<div class="container mt-5">
+    <form action="" class="h-100">
+        <div class="input-group mb-3 input-group-lg">
+            <input type="text" class="form-control" placeholder="Nome" name="nome">
+        </div>
+
+        <div class="input-group mb-3 input-group-lg">
+            <input type="email" class="form-control" placeholder="Email" name="email">
+        </div>
+
+        <div class="input-group mb-3 input-group-lg">
+            <input type="text" class="form-control" placeholder="Telefone" name="telefone">
+        </div>
+
+        <div class="form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="notificacao" name="notificacao" checked>
+            <label class="form-check-label" for="notificacao">Quero receber notificações</label>
+        </div>
+
+        <div class="form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="termo" name="termo">
+            <label class="form-check-label" for="termo">Li e aceito os termo de uso</label>
+        </div>
+
+
+        <app-btn title="Finalizar Cadastro" class="fixed-bottom container mb-3"></app-btn>
+
+    </form>
+</div>

@@ -1,0 +1,45 @@
+$color-black: #000000dd;
+$color-orange: #FF7300DD;
+$color-blue: #1860B3DD;
+.img-filme {
+    width: 184px;
+    height: 250px;
+}
+
+.title {
+    margin-left: 2rem;
+    letter-spacing: 0.4px;
+    color: $color-black;
+    font-weight: bold;
+}
+
+.card {
+    background: var(--color-cian) 0% 0% no-repeat padding-box;
+    border-radius: 2px;
+    .mycontainer {
+        display: flex;
+        .card-title {
+            color: $color-black;
+        }
+        .icon-favorito {
+            color: $color-orange;
+            vertical-align: middle;
+            margin-right: 0.2rem;
+        }
+    }
+    .card-text {
+        color: $color-black;
+    }
+    .tipo {
+        letter-spacing: 0.24px;
+        color: $color-orange;
+    }
+    .btn-time {
+        border: 1px solid $color-blue;
+        border-radius: 2px;
+        margin-right: 0.625rem;
+        width: 90px;
+        height: 32px;
+        color: $color-blue;
+    }
+}
